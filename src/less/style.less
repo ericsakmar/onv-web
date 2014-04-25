@@ -1,0 +1,147 @@
+@verticalMargin: 16px;
+@gutter: 8px;
+@linkColor: darken(rgb(124, 170, 241), 25%);
+
+body {
+  font-size: 21px;
+  background: rgb(239, 226, 183);
+  font-family: 'Open Sans', 'sans-serif';
+  line-height: 1.2em;
+}
+
+section {
+  max-width: 960px;
+  margin: 32px auto;
+}
+
+article {
+  float: left;
+  text-align: left;
+  padding: 32px @gutter;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: @verticalMargin;
+}
+
+p {
+  margin-bottom:  @verticalMargin;
+}
+
+a {
+  text-decoration: none;
+  color: @linkColor;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.button {
+  text-decoration: none;
+  background: @linkColor;
+  display: inline-block;
+  color: #fff;
+  
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+h1, .title {
+  font-family: 'Abril Fatface', 'cursive';
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin-bottom: @verticalMargin;
+  border-bottom: 3px solid black;
+}
+
+figure {
+  float: left;
+  width: 50%;
+  padding-right: 4px;
+}
+
+figure:last-child {
+  padding-right: 0px;
+  padding-left: 4px;
+}
+
+/* index */
+#logo {
+  text-align: center;
+}
+
+/* press page */
+#factsheet {
+  width: 33%;
+
+  h1 {
+    display: none;
+  }
+}
+
+#description {
+  width: 66%;
+}
+
+#team {
+  p {
+    float: left;
+    width: 33%;
+  }
+}
+
+/* http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.video-container {
+  position: relative;
+  padding-bottom: 54%;
+  padding-top: 25px;
+  height: 0;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+@media all and (max-width: 640px) {
+  #factsheet, #description {
+    width: 100%;
+  }
+
+  #factsheet h1 {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  figure {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  #team p {
+    width: 100%;
+  }
+}

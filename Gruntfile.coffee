@@ -7,6 +7,8 @@ module.exports = (grunt) ->
     copy:
       static:
         expand: true, cwd: 'src/', src: '*.html', dest: 'build/'
+      images:
+        expand: true, cwd: 'images/', src: '*.png', dest: 'build/images/'
 
     less:
       main:
@@ -48,6 +50,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-compress'
 
-  grunt.registerTask 'build', ['coffee:main', 'less:main', 'copy:static', 'cssmin:combine', 'uglify:js'] 
+  grunt.registerTask 'build', ['coffee:main', 'less:main', 'copy:static', 'copy:images', 'cssmin:combine', 'uglify:js'] 
   grunt.registerTask 'dist', ['build', 'compress:dist']
   grunt.registerTask 'default', ['build']
