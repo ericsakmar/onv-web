@@ -14,6 +14,7 @@ module.exports = (grunt) ->
       main:
         files:
           'build/css/style.css':'src/less/style.less'
+          'build/css/press.css':'src/less/press.less'
 
     coffee:
       main:
@@ -29,6 +30,7 @@ module.exports = (grunt) ->
       combine:
         files:
           'build/css/style.css':['lib/reset.css', 'build/css/style.css']
+          'build/css/press.css':['lib/reset.css', 'build/css/press.css']
 
     uglify:
       js:
