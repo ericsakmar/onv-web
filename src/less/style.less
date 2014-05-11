@@ -21,6 +21,7 @@ body {
   font-family: 'Glegoo', serif;
   line-height: 1.2em;
   text-align: center;
+  color: @text-color;
 }
 
 a {
@@ -31,7 +32,7 @@ a {
 header {
   position: fixed;
   top: 0;
-  margin: 5% 0;
+  margin: 3% 0;
   width: 100%;
 
   a {
@@ -46,11 +47,10 @@ footer {
   height: @footer-image-height + 29px;
   background: url('../images/footer.png');
   background-position: top center;
-  padding-top: 32px;
 
   #down-button {
    display: inline-block;
-   margin: 74px 0;
+   margin: 182px 0 6px 0;
   }
 
   p {
@@ -62,7 +62,19 @@ footer {
 
 section {
   padding: 136px 0;
+
+  p {
+    max-width: 600px;
+    margin: 8px auto 32px auto;
+  }
 }
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2em;
+}
+
+
 
 #main {
   background: rgba(250,209,60,1);
@@ -86,7 +98,7 @@ section {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db371b', endColorstr='#7d0004', GradientType=0 );
 }
 
-#about {
+#about, #about2, #media {
   background: rgba(170,227,218,1);
   background: -moz-linear-gradient(top, rgba(170,227,218,1) 0%, rgba(110,194,179,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(170,227,218,1)), color-stop(100%, rgba(110,194,179,1)));
@@ -97,13 +109,30 @@ section {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aae3da', endColorstr='#6ec2b3', GradientType=0 );
 }
 
+#about {
+  h1 {
+    color: @text-accent-1;
+  }
+}
 
+#about2 {
 
+}
 
+.accent1 {
+  color: @text-accent-1;
+}
 
-h1 {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 2em;
+.accent2 {
+  color: @text-accent-2;
+}
+
+.accent3 {
+  color: @text-accent-3;
+}
+
+.accent4 {
+  color: @text-accent-4;
 }
 
 
