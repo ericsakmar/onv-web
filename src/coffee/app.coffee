@@ -1,18 +1,20 @@
+document.getElementById('down-button').onclick = (evt) -> 
+  y = window.pageYOffset
+  console.log window.innerHeight, y
   
-sectionChanged = (toggle, anchor) ->
-  
-  next = switch anchor
-    when '#main' then '#save'
-    when '#save' then '#about'
-    when '#about' then '#about2'
-    when '#about2' then '#media'
-    else '#main'
+  next = ''
+  if y < window.innerHeight
+    next = '#save'
+  else if y < window.innerHeight * 2
+    next = '#about'
+  else if y < window.innerHeight * 3
+    next = '#about2'
+  else if y < window.innerHeight * 4
+    next = '#media'
+  else
+    next = '#main'
 
-  document.getElementById('down-button').onclick = (evt) ->
-    smoothScroll.animateScroll(null, next)
+  console.log next
+  smoothScroll.animateScroll(document.getElementById('down-button'), next)
 
-smoothScroll.init
-  callbackAfter: sectionChanged
-
-
-
+smoothScroll.init()

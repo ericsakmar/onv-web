@@ -3,6 +3,9 @@
 
 @text-color: rgb(65, 43, 21);
 @active-color: rgb(209, 108, 0);
+@footer-text-color: #583a1b;
+
+
 
 @divider-color: rgb(70, 139, 27);
 @text-accent-1: rgb(214, 56, 23);
@@ -41,16 +44,17 @@ header {
 }
 
 footer {
+  color: @footer-text-color;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: @footer-image-height + 29px;
+  height: @footer-image-height + 56px;
   background: url('../images/footer.png');
   background-position: top center;
 
   #down-button {
    display: inline-block;
-   margin: 182px 0 6px 0;
+   margin: 172px 0 8px 0;
   }
 
   p {
