@@ -2,7 +2,7 @@
 @headerTextSize2: 1.33em;
 
 @text-color: rgb(65, 43, 21);
-@active-color: rgb(209, 108, 0);
+@active-text-color: rgb(209, 108, 0);
 @footer-text-color: #583a1b;
 
 @divider-color: rgb(70, 139, 27);
@@ -28,6 +28,11 @@ body {
 a {
   text-decoration: none;
   color: @text-color;
+  transition: color 0.2s ease;
+}
+
+a.active {
+  color: @active-text-color;
 }
 
 header {

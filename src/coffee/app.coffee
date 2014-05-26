@@ -2,7 +2,6 @@ window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAn
 
 document.getElementById('down-button').onclick = (evt) -> 
   y = window.pageYOffset
-  console.log window.innerHeight, y
   
   next = ''
   if y < window.innerHeight
@@ -18,7 +17,29 @@ document.getElementById('down-button').onclick = (evt) ->
 
   smoothScroll.animateScroll(document.getElementById('down-button'), next)
 
-smoothScroll.init()
+window.addEventListener "scroll", (evt) ->
+  y = window.pageYOffset
+  if y < window.innerHeight * 2
+    document.getElementById('main-link').classList.add('active')
+    document.getElementById('about-link').classList.remove('active')
+    document.getElementById('about2-link').classList.remove('active')
+    document.getElementById('media-link').classList.remove('active')
+  else if y < window.innerHeight * 3
+    document.getElementById('main-link').classList.remove('active')
+    document.getElementById('about-link').classList.add('active')
+    document.getElementById('about2-link').classList.remove('active')
+    document.getElementById('media-link').classList.remove('active')
+  else if y < window.innerHeight * 4
+    document.getElementById('main-link').classList.remove('active')
+    document.getElementById('about-link').classList.remove('active')
+    document.getElementById('about2-link').classList.add('active')
+    document.getElementById('media-link').classList.remove('active')
+  else
+    document.getElementById('main-link').classList.remove('active')
+    document.getElementById('about-link').classList.remove('active')
+    document.getElementById('about2-link').classList.remove('active')
+    document.getElementById('media-link').classList.add('active')
+  
 
 setUpClouds = (canvasId, images) ->
   width = window.innerWidth
@@ -60,7 +81,8 @@ makeCloud = (index, width, height, images) ->
 
 getRandom = (min, max) -> Math.floor(Math.random() * (max - min + 1)) + min
 
-
+# DOING STUFF
+smoothScroll.init()
 setUpClouds('main-canvas', ['images/cloud-dark-1.png', 'images/cloud-dark-2.png', 'images/cloud-dark-3.png', 'images/cloud-dark-4.png'])
 setUpClouds('about-canvas', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])
 setUpClouds('about-canvas-2', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])
