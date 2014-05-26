@@ -9,8 +9,6 @@ module.exports = (grunt) ->
         expand: true, cwd: 'src/', src: '*.html', dest: 'build/'
       images:
         expand: true, cwd: 'images/', src: '*.png', dest: 'build/images/'
-      lib:
-        expand: true, cwd: 'lib/', src: '*.js', dest: 'build/js/'
 
     less:
       main:
@@ -37,7 +35,7 @@ module.exports = (grunt) ->
     uglify:
       js:
         files:
-          'build/js/app.js':'build/js/app.js'
+          'build/js/app.js':['smooth-scroll.js', 'build/js/app.js']
 
     compress:
       dist:
@@ -54,6 +52,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-compress'
 
-  grunt.registerTask 'build', ['coffee:main', 'less:main', 'copy:lib', 'copy:static', 'copy:images', 'cssmin:combine', 'uglify:js'] 
+  grunt.registerTask 'build', ['coffee:main', 'less:main', 'copy:static', 'copy:images', 'cssmin:combine', 'uglify:js'] 
   grunt.registerTask 'dist', ['build', 'compress:dist']
   grunt.registerTask 'default', ['build']
