@@ -19,6 +19,7 @@ document.getElementById('down-button').onclick = (evt) ->
 
 window.addEventListener "scroll", (evt) ->
   y = window.pageYOffset
+  
   if y < window.innerHeight * 2
     document.getElementById('main-link').classList.add('active')
     document.getElementById('about-link').classList.remove('active')
@@ -40,7 +41,6 @@ window.addEventListener "scroll", (evt) ->
     document.getElementById('about2-link').classList.remove('active')
     document.getElementById('media-link').classList.add('active')
   
-
 setUpClouds = (canvasId, images) ->
   width = window.innerWidth
   height = window.innerHeight
