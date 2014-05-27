@@ -45,12 +45,20 @@ makeCloud = (index, width, height, images) ->
 getRandom = (min, max) -> Math.floor(Math.random() * (max - min + 1)) + min
 
 ## DOING STUFF
-$('#fullpage').fullpage(
-  anchors: ['onv', 'save', 'the-game', 'loot', 'media']
-  menu: '#menu'
-);
+$('#fullpage').fullpage({
+  anchors: ['onv', 'save', 'the-game', 'loot', 'media', 'coming-soon'],
+  menu: '#menu',
+  afterLoad: (anchorLink, index) -> 
+    if anchorLink == 'coming-soon'
+      $('#down-button').addClass('hidden')
+    else
+      $('#down-button').removeClass('hidden')
+})
+console.log('hi?')
+
 
 setUpClouds('main-canvas', ['images/cloud-dark-1.png', 'images/cloud-dark-2.png', 'images/cloud-dark-3.png', 'images/cloud-dark-4.png'])
 setUpClouds('about-canvas', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])
 setUpClouds('about-canvas-2', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])
 setUpClouds('media-canvas', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])
+setUpClouds('coming-soon-canvas', ['images/cloud-light-1.png', 'images/cloud-light-2.png', 'images/cloud-light-3.png'])

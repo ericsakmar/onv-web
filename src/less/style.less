@@ -47,19 +47,28 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: @footer-image-height + 56px;
+  height: @footer-image-height + 48px;
   background: url('../images/footer.png');
   background-position: top center;
 
   #down-button {
-   display: inline-block;
-   margin: 172px 0 8px 0;
+    display: inline-block;
+    margin: 172px 0 8px 0;
+    transition: opacity 0.2s ease;
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 
   p {
     font-size: 0.666em;
     background: rgb(50, 33, 16);
     padding: 8px 0;
+  }
+
+  a {
+    color: @footer-text-color;
   }
 }
 
@@ -68,7 +77,7 @@ div.section {
   position: relative;
 
   .content {
-    top: 12%;
+    top: 20%;
     position: absolute;
     width: 100%;
   }
