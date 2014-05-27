@@ -46,6 +46,7 @@ getRandom = (min, max) -> Math.floor(Math.random() * (max - min + 1)) + min
 
 ## DOING STUFF
 $('#fullpage').fullpage(
+  anchors: ['onv', 'save', 'the-game', 'loot', 'media']
   menu: '#menu'
 );
 

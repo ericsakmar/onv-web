@@ -13,7 +13,7 @@
 <body>
 
   <div id="fullpage">
-    <div class="section" id="main" data-anchor="main-page">
+    <div class="section" id="main" data-anchor="onv">
       <canvas id="main-canvas"></canvas>
 
       <div class="content">
@@ -21,14 +21,14 @@
       </div>
     </div>
 
-    <div class="section" id="save">
+    <div class="section redsky" data-anchor="save">
 
       <div class="content">
         <img src="images/save.png" alt="Save the village from the volcano!" />
       </div>
     </div>
 
-    <div class="section" id="about" data-anchor="about-page">
+    <div class="section bluesky" id="about" data-anchor="the-game">
       <canvas id="about-canvas"></canvas>
 
       <div class="content">
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="section" id="about2" data-anchor="about-page-2">
+    <div class="section bluesky" data-anchor="loot">
       <canvas id="about-canvas-2"></canvas>
 
       <div class="content">
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="section" id="media" data-anchor="media-page">
+    <div class="section bluesky" data-anchor="media">
       <canvas id="media-canvas"></canvas>
 
       <div class="content">
@@ -79,10 +79,10 @@
   <!-- down here because of z-index stuff -->
   <header>
     <nav id="menu">
-      <a href="#main-page" id="main-link" data-menuanchor="main-page">OH NO Volcano!</a> |
-      <a href="#about-page" id="about-link" data-menuanchor="about-page">The Game</a> |
-      <a href="#about-page-2" id="about2-link" data-menuanchor="about-page-2">Loot</a> |
-      <a href="#media-page" id="media-link" data-menuanchor="media-page">Media</a><!--  |
+      <a href="#onv" data-menuanchor="onv">OH NO Volcano!</a> |
+      <a href="#the-game" data-menuanchor="the-game">The Game</a> |
+      <a href="#loot" data-menuanchor="loot">Loot</a> |
+      <a href="#media" data-menuanchor="media">Media</a><!--  |
       <a href="#download">Get it Now!</a> -->
     </nav>
   </header>
