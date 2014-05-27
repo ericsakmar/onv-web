@@ -29,13 +29,13 @@ module.exports = (grunt) ->
     cssmin:
       combine:
         files:
-          'build/css/style.css':['lib/reset.css', 'build/css/style.css']
+          'build/css/style.css':['lib/reset.css', 'lib/jquery.fullPage.css', 'build/css/style.css']
           'build/css/press.css':['lib/reset.css', 'build/css/press.css']
 
     uglify:
       js:
         files:
-          'build/js/app.js':['smooth-scroll.js', 'build/js/app.js']
+          'build/js/app.js':['lib/jquery.easings.min.js', 'lib/jquery.fullPage.min.js', 'build/js/app.js']
 
     compress:
       dist:

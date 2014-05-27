@@ -12,75 +12,77 @@
 
 <body>
 
-  <section id="main">
-    <canvas id="main-canvas"></canvas>
+  <div id="fullpage">
+    <div class="section" id="main" data-anchor="main-page">
+      <canvas id="main-canvas"></canvas>
 
-    <div class="content">
-      <img src="images/logo-banner.png" alt="OH NO Volcano!" />
+      <div class="content">
+        <img src="images/logo-banner.png" alt="OH NO Volcano!" />
+      </div>
     </div>
-  </section>
 
-  <section id="save">
+    <div class="section" id="save">
 
-    <div class="content">
-      <img src="images/save.png" alt="Save the village from the volcano!" />
+      <div class="content">
+        <img src="images/save.png" alt="Save the village from the volcano!" />
+      </div>
     </div>
-  </section>
 
-  <section id="about">
-    <canvas id="about-canvas"></canvas>
+    <div class="section" id="about" data-anchor="about-page">
+      <canvas id="about-canvas"></canvas>
 
-    <div class="content">
+      <div class="content">
 
-      <h1>OH NO Volcano!</h1>
+        <h1>OH NO Volcano!</h1>
 
-      <p>is a game about a peaceful village, a mean old volcano, and lots and lots of falling stuff. It's a story of
-        adventure and bravery in the face of impossible odds.</p>
+        <p>is a game about a peaceful village, a mean old volcano, and lots and lots of falling stuff. It's a story of
+          adventure and bravery in the face of impossible odds.</p>
 
-      <p>Tilting your phone back and forth controls a big net, which you use to catch projectiles as they are hurled 
-        out of the volcano in increasingly aggressive waves. Catch rocks &amp; lava, gather coins, replenish the village
-        with aid crates, and collect rare and mysterious loot.</p>
+        <p>Tilting your phone back and forth controls a big net, which you use to catch projectiles as they are hurled 
+          out of the volcano in increasingly aggressive waves. Catch rocks &amp; lava, gather coins, replenish the village
+          with aid crates, and collect rare and mysterious loot.</p>
 
-      <p>Beat your high score and share your stats and achievements with friends!</p>
+        <p>Beat your high score and share your stats and achievements with friends!</p>
+      </div>
     </div>
-  </section>
 
-  <section id="about2">
-    <canvas id="about-canvas-2"></canvas>
+    <div class="section" id="about2" data-anchor="about-page-2">
+      <canvas id="about-canvas-2"></canvas>
 
-    <div class="content">
-      <h1>
-        <span class="accent1">Catch Stuff</span> &#183; 
-        <span class="accent2">Score Points</span> &#183;
-        <span class="accent3">Get Awards</span> &#183;
-        <span class="accent4">Collect Loot</span>
-      </h1>
+      <div class="content">
+        <h1>
+          <span class="accent1">Catch Stuff</span> &#183; 
+          <span class="accent2">Score Points</span> &#183;
+          <span class="accent3">Get Awards</span> &#183;
+          <span class="accent4">Collect Loot</span>
+        </h1>
 
-      <p>Defend the village in a never ending quest for glory. Reap the rewards with achievements and rare items!</p>
+        <p>Defend the village in a never ending quest for glory. Reap the rewards with achievements and rare items!</p>
 
-      <img src="images/projectiles.png" alt="projectiles" />
+        <img src="images/projectiles.png" alt="projectiles" />
+      </div>
     </div>
-  </section>
 
-  <section id="media">
-    <canvas id="media-canvas"></canvas>
+    <div class="section" id="media" data-anchor="media-page">
+      <canvas id="media-canvas"></canvas>
 
-    <div class="content">
-      <div class="video-container-container">
-        <div class="video-container">
-          <iframe src="http://player.vimeo.com/video/92382657" width="1136" height="640" frameborder="0"></iframe>
+      <div class="content">
+        <div class="video-container-container">
+          <div class="video-container">
+            <iframe src="http://player.vimeo.com/video/92382657" width="1136" height="640" frameborder="0"></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- down here because of z-index stuff -->
   <header>
-    <nav>
-      <a href="#save" id="main-link" data-scroll>OH NO Volcano!</a> |
-      <a href="#about" id="about-link" data-scroll>The Game</a> |
-      <a href="#about2" id="about2-link" data-scroll>Loot</a> |
-      <a href="#media" id="media-link" data-scroll>Media</a><!--  |
+    <nav id="menu">
+      <a href="#main-page" id="main-link" data-menuanchor="main-page">OH NO Volcano!</a> |
+      <a href="#about-page" id="about-link" data-menuanchor="about-page">The Game</a> |
+      <a href="#about-page-2" id="about2-link" data-menuanchor="about-page-2">Loot</a> |
+      <a href="#media-page" id="media-link" data-menuanchor="media-page">Media</a><!--  |
       <a href="#download">Get it Now!</a> -->
     </nav>
   </header>
@@ -100,7 +102,7 @@
 
   </footer>
 
-  <script type="text/javascript" src="js/smooth-scroll.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
