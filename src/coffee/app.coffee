@@ -54,7 +54,6 @@ $('#fullpage').fullpage({
     else
       $('#down-button').removeClass('hidden')
 })
-console.log('hi?')
 
 
 setUpClouds('main-canvas', ['images/cloud-dark-1.png', 'images/cloud-dark-2.png', 'images/cloud-dark-3.png', 'images/cloud-dark-4.png'])

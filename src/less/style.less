@@ -12,9 +12,10 @@
 @text-accent-4: rgb(133, 42, 108);
 
 @footer-image-height: 357px;
+@footer-background-color: rgb(50, 33, 16);
 
 body {
-  font-size: 20px;
+  font-size: 20px !important; /* using important because plugins think it's cool to mess with the font size */
   font-family: 'Glegoo', serif;
   line-height: 1.2em;
   text-align: center;
@@ -31,10 +32,14 @@ a.active {
   color: @active-text-color;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   position: fixed;
   top: 0;
-  margin: 3% 0;
+  margin: 16px 0;
   width: 100%;
 
   a {
@@ -62,8 +67,8 @@ footer {
   }
 
   p {
-    font-size: 0.666em;
-    background: rgb(50, 33, 16);
+    font-size: 16px;
+    background: @footer-background-color;
     padding: 8px 0;
   }
 
@@ -80,6 +85,7 @@ div.section {
     top: 20%;
     position: absolute;
     width: 100%;
+    padding: 0 16px;
   }
 
   p {
@@ -91,6 +97,7 @@ div.section {
 h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 2em;
+  line-height: 1em;
 }
 
 #main {
@@ -148,9 +155,6 @@ h1 {
   color: @text-accent-4;
 }
 
-
-
-
 .video-container-container {
   max-width: 600px;
   margin: 0 auto;
@@ -169,5 +173,54 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+#small-logo {
+  display: none;
+  width: 505px;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 767px) {
+
+  body {
+    font-size: 14px !important;
+  }
+
+  header {
+    display: none;
+  }
+
+  #down-button {
+    display: none !important;
+    background: #f00;
+  }
+
+  #big-logo {
+    display: none;
+  }
+
+  #small-logo {
+    display: block;
+  }
+
+  footer {
+    height: auto;
+    background: @footer-background-color;
+
+    p {
+      display: none;
+    }
+  }
+}
+
+
+@media all and (max-height: 768px) {
+  div.section {
+  
+    .content {
+      top: 10%;
+    }
   }
 }
