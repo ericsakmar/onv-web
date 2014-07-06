@@ -81,9 +81,16 @@ div.section {
   overflow: hidden;
   position: relative;
 
-  .content {
-    top: 20%;
+  canvas {
     position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .content {
+    margin-top: -250px;
     width: 100%;
     padding: 0 16px;
   }
@@ -156,7 +163,7 @@ h1 {
 }
 
 .video-container-container {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -219,8 +226,6 @@ h1 {
 @media all and (max-height: 768px) {
   div.section {
   
-    .content {
-      top: 10%;
-    }
+    
   }
 }
