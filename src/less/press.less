@@ -1,11 +1,13 @@
 @verticalMargin: 16px;
-@gutter: 8px;
+@gutter: 24px;
 @linkColor: darken(rgb(124, 170, 241), 25%);
+@textColor: #412B17;
 
 body {
   font-size: 21px;
   font-family: 'Glegoo', serif;
   line-height: 1.2em;
+  color: @textColor;
 
   background: rgba(170,227,218,1);
   background: -moz-linear-gradient(top, rgba(170,227,218,1) 0%, rgba(110,194,179,1) 100%);
@@ -74,26 +76,28 @@ h1, .title {
 h1 {
   padding-bottom: 4px;
   margin-bottom: @verticalMargin;
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid @textColor;
 }
 
 figure {
   float: left;
   width: 50%;
   padding-right: 4px;
+  padding-bottom: 16px;
 }
 
-figure:last-child {
+figure:nth-child(odd) {
   padding-right: 0px;
   padding-left: 4px;
 }
 
 img.screenshot {
-  border: 1px solid black;
+  border: 1px solid @textColor;
 }
 
 #factsheet {
   width: 33%;
+  font-size: 16px;
 
   h1 {
     display: none;
