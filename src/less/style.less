@@ -55,6 +55,7 @@ footer {
   height: @footer-image-height + 48px;
   background: url('../images/footer.png');
   background-position: top center;
+  z-index: 2;
 
   #down-button {
     display: inline-block;
@@ -94,7 +95,7 @@ div.section {
     position: absolute;
     left: 0;
     right: 0;
-    top: 120px;
+    top: 140px;
 
     padding: 0 16px;
   }
@@ -193,6 +194,27 @@ h1 {
   margin: 0 auto;
 }
 
+ul.screenshots {
+
+  max-width: 648px;
+  margin: 8px auto 0 auto;
+  overflow: auto;
+
+  li {
+    padding: 4px;
+    float: left;
+    width: 25%;
+    overflow: auto;
+  }
+
+  img {
+    border: 1px solid #412B17;
+  }
+}
+
+
+
+
 @media all and (max-width: 767px) {
 
   body {
@@ -221,15 +243,29 @@ h1 {
     background: @footer-background-color;
 
     p {
-      display: none;
+      font-size: 12px;
     }
   }
 }
 
 
+
+
 @media all and (max-height: 768px) {
   div.section {
-  
-    
+    .content {
+      top: 32px;  
+    }
+  }
+
+  #small-logo {
+    margin-top: 32px;
+  }
+
+  ul.screenshots {
+
+    li {
+      width: 50%;
+    }
   }
 }
