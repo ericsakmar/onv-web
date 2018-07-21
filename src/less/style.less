@@ -91,7 +91,7 @@ div.section {
 
   .content {
     z-index: 1;
-    
+
     position: absolute;
     left: 0;
     right: 0;
@@ -149,6 +149,10 @@ h1 {
   h1 {
     color: @text-accent-1;
   }
+
+  .content {
+    top: 64px;
+  }
 }
 
 .accent1 {
@@ -178,7 +182,7 @@ h1 {
   padding-bottom: 54%;
   padding-top: 25px;
   height: 0;
-  
+
   iframe {
     position: absolute;
     top: 0;
@@ -198,21 +202,17 @@ ul.screenshots {
 
   max-width: 648px;
   margin: 8px auto 0 auto;
-  overflow: auto;
 
   li {
     padding: 4px;
     float: left;
-    width: 25%;
-    overflow: auto;
+    width: 25%; 
   }
 
   img {
     border: 1px solid #412B17;
   }
 }
-
-
 
 
 @media all and (max-width: 767px) {
@@ -254,7 +254,7 @@ ul.screenshots {
 @media all and (max-height: 768px) {
   div.section {
     .content {
-      top: 32px;  
+      top: 32px;
     }
   }
 
